@@ -106,7 +106,7 @@ export function Desktop() {
         ) : null}
         {app === 'token' ? (
           <div className="file-view">
-            <TokenDetails />
+            <TokenDetails framed={false} />
           </div>
         ) : null}
       </AppWindow>
