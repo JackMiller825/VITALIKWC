@@ -12,7 +12,7 @@ interface CaCopyProps {
 export function CaCopy({ withPrefix = false }: CaCopyProps) {
   const presentation = addressPresentation(site)
   // const value = presentation.kind === 'published' ? presentation.address : 'Coming Soon...'
-  const value = 'Coming Soon'
+  const value = '0xd1Af805c4c7C159ddeFcd871308f75Ec74a3037e'
   const [copyState, setCopyState] = useState<'idle' | 'copied' | 'failed'>('idle')
 
   async function onCopy() {
