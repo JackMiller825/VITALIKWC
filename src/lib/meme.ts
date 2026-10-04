@@ -1,3 +1,5 @@
+import { publicPath } from './publicPath.ts'
+
 export type MemeTemplate = 'retro' | 'comic' | 'badge'
 
 export const MEME_SIZE = 1080
@@ -305,7 +307,7 @@ export async function renderMeme({ template, top, bottom }: MemeRequest): Promis
   ctx.imageSmoothingQuality = 'high'
 
   if (template === 'retro') {
-    const banner = await loadImage('/media/banner-retro.webp')
+    const banner = await loadImage(publicPath('/media/banner-retro.webp'))
     ctx.fillStyle = '#E7FFF6'
     ctx.fillRect(0, 0, MEME_SIZE, MEME_SIZE)
     ctx.fillStyle = MINT
@@ -321,7 +323,7 @@ export async function renderMeme({ template, top, bottom }: MemeRequest): Promis
     drawCaption(ctx, top, topBox)
     drawCaption(ctx, bottom, bottomBox)
   } else if (template === 'comic') {
-    const mascot = await loadImage('/media/mascot-mark.webp')
+    const mascot = await loadImage(publicPath('/media/mascot-mark.webp'))
     ctx.fillStyle = CREAM
     ctx.fillRect(0, 0, MEME_SIZE, MEME_SIZE)
     const cx = 540
@@ -344,7 +346,7 @@ export async function renderMeme({ template, top, bottom }: MemeRequest): Promis
     drawCaption(ctx, top, { x: 70, y: 36, w: 940, h: 150 })
     drawCaption(ctx, bottom, { x: 70, y: 800, w: 940, h: 170 })
   } else {
-    const seal = await loadImage('/media/logo-seal.webp')
+    const seal = await loadImage(publicPath('/media/logo-seal.webp'))
     ctx.fillStyle = CREAM
     ctx.fillRect(0, 0, MEME_SIZE, MEME_SIZE)
     ctx.beginPath()

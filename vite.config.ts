@@ -44,6 +44,7 @@ function siteFiles(): Plugin {
 }
 
 export default defineConfig({
+  base: process.env.PAGES_BASE ?? '/',
   plugins: [react(), siteFiles()],
   server: { host: '0.0.0.0', port: 4317, strictPort: true },
   preview: { host: '0.0.0.0', port: 4317, strictPort: true },

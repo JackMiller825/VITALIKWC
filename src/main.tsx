@@ -10,7 +10,13 @@ import '@fontsource/ibm-plex-mono/latin-400.css'
 import '@fontsource/ibm-plex-mono/latin-500.css'
 import '@fontsource/press-start-2p/latin-400.css'
 import App from './App.tsx'
+import { publicPath } from './lib/publicPath.ts'
 import './styles/global.css'
+
+document.documentElement.style.setProperty(
+  '--desk-cursor',
+  `url("${publicPath('/cursor-pixel.svg')}") 2 2, auto`,
+)
 
 const root = document.getElementById('root')
 if (!root) throw new Error('Root element missing')

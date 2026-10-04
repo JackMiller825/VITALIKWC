@@ -492,7 +492,7 @@ a:hover {
   background:
     radial-gradient(circle at 12% 20%, rgba(124, 245, 190, 0.7), transparent 32%),
     linear-gradient(var(--mint-soft), #f7fffb);
-  cursor: url('/cursor-pixel.svg') 2 2, auto;
+  cursor: var(--desk-cursor, auto);
 }
 
 .desk-help {

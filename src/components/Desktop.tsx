@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { site } from '../config/site.ts'
 import { mascotQuips, storyFileText } from '../content/story.ts'
 import { track } from '../lib/analytics.ts'
+import { publicPath } from '../lib/publicPath.ts'
 import { AppWindow } from './AppWindow.tsx'
 import { ExternalLink } from './ExternalLink.tsx'
 import { MemeMaker } from './MemeMaker.tsx'
@@ -76,7 +77,7 @@ export function Desktop() {
               <img
                 key={reduceMotion ? 'still' : boop}
                 className={!reduceMotion && boop > 0 ? 'boop' : undefined}
-                src="/media/mascot-mark.webp"
+                src={publicPath('/media/mascot-mark.webp')}
                 width={640}
                 height={640}
                 alt=""

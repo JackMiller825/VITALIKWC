@@ -1,6 +1,7 @@
 import { isHttpsUrl } from '../config/guards.ts'
 import { site } from '../config/site.ts'
 import { track } from '../lib/analytics.ts'
+import { publicPath } from '../lib/publicPath.ts'
 import { ExternalLink } from './ExternalLink.tsx'
 
 export function Footer() {
@@ -11,7 +12,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="wrap footer-grid">
         <img
-          src="/media/logo-seal.webp"
+          src={publicPath('/media/logo-seal.webp')}
           width={768}
           height={768}
           alt="Circular badge reading Vitalik-Inspired World Computer around the flexing computer mascot."

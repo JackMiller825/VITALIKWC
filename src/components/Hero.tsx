@@ -1,6 +1,7 @@
 import { canOfferBuyLink, isHttpsUrl } from '../config/guards.ts'
 import { site } from '../config/site.ts'
 import { track } from '../lib/analytics.ts'
+import { publicPath } from '../lib/publicPath.ts'
 import { ContractStatus } from './ContractStatus.tsx'
 import { ExternalLink } from './ExternalLink.tsx'
 
@@ -61,7 +62,7 @@ export function Hero() {
           </div>
           <div className="hero-art-body">
             <img
-              src="/media/mascot-mark.webp"
+              src={publicPath('/media/mascot-mark.webp')}
               width={640}
               height={640}
               alt="Mascot of Vitalik-Inspired World Computer: a smiling purple desktop computer with a globe on its screen, flexing both arms and wearing sneakers."

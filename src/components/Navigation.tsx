@@ -1,6 +1,7 @@
 import { canOfferBuyLink } from '../config/guards.ts'
 import { site } from '../config/site.ts'
 import { track } from '../lib/analytics.ts'
+import { publicPath } from '../lib/publicPath.ts'
 
 const links = [
   { href: '#story', label: 'Story' },
@@ -22,7 +23,7 @@ export function Navigation() {
         <div className="nav-top">
           <a className="brand" href="#top">
             <img
-              src="/media/mascot-mark.webp"
+              src={publicPath('/media/mascot-mark.webp')}
               width={640}
               height={640}
               alt=""

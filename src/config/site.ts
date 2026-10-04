@@ -9,9 +9,9 @@
  * A format check is not proof of authenticity. contractConfirmed must be set
  * by the project owner on purpose.
  *
- * siteUrl is null until a production domain exists. Keep it null or a
- * double-quoted https origin with no trailing path, for example
- * "https://example.com". The build reads that field for the canonical URL.
+ * siteUrl is the public site origin, including a path when the site is not
+ * served from the domain root. Keep it null or a double-quoted https URL.
+ * The build reads that field for the canonical URL.
  */
 
 export type LaunchStatus = 'prelaunch' | 'live'
@@ -135,7 +135,7 @@ export const site: SiteConfig = {
   telegramUrl: null,
   xUrl: null,
   chartUrl: null,
-  siteUrl: null,
+  siteUrl: "https://jackmiller825.github.io/VITALIKWC",
   analyticsEnabled: false,
   sourceArticle: {
     title: 'The cryptographic world computer',

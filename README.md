@@ -4,6 +4,14 @@ Website for **$VITALIKWC**, an independent Ethereum community memecoin. The page
 
 Independent community project. Not affiliated with or endorsed by Vitalik Buterin or the Ethereum Foundation.
 
+Public site: https://jackmiller825.github.io/VITALIKWC/
+
+The GitHub Pages build uses a project subpath:
+
+```bash
+PAGES_BASE=/VITALIKWC/ npm run build
+```
+
 ## Run it
 
 ```bash
@@ -37,7 +45,7 @@ Edit `src/config/site.ts` only when a value is real. Leave unknowns as `null`.
 
 | Field | Needed for |
 | --- | --- |
-| `siteUrl` | Canonical URL, absolute social image, sitemap. Use `null` or a double-quoted https origin such as `"https://example.com"`. |
+| `siteUrl` | Canonical URL, absolute social image, sitemap. Currently `https://jackmiller825.github.io/VITALIKWC`. |
 | `launchStatus: 'live'` | Public trading state. |
 | `contractAddress` | The token address. |
 | `contractConfirmed: true` | Owner confirmation. A valid-looking address is not enough. |

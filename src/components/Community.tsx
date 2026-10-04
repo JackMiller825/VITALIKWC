@@ -1,5 +1,6 @@
 import { isHttpsUrl } from '../config/guards.ts'
 import { site } from '../config/site.ts'
+import { publicPath } from '../lib/publicPath.ts'
 import { track } from '../lib/analytics.ts'
 import { ExternalLink } from './ExternalLink.tsx'
 import { Section } from './Section.tsx'
@@ -47,7 +48,7 @@ export function Community() {
             </div>
             <div className="os-panel">
               <img
-                src={asset.preview}
+                src={publicPath(asset.preview)}
                 width={asset.width}
                 height={asset.height}
                 alt={asset.alt}
@@ -56,7 +57,7 @@ export function Community() {
               />
               <h4>{asset.title}</h4>
               <p>{asset.description}</p>
-              <a className="btn btn-small" href={asset.file} download>
+              <a className="btn btn-small" href={publicPath(asset.file)} download>
                 Download {asset.sizeLabel}
               </a>
             </div>
@@ -75,7 +76,7 @@ export function Community() {
           <figcaption>Retro desktop · example captions sit outside the banner</figcaption>
           <p className="example-caption">Top: “World computer, local sense of humor.”</p>
           <img
-            src="/media/banner-retro.webp"
+            src={publicPath('/media/banner-retro.webp')}
             width={1600}
             height={534}
             alt="Retro desktop banner used as the artwork inside the retro meme template."
@@ -88,7 +89,7 @@ export function Community() {
           <figcaption>Comic burst · drawn in the maker, not a separate banner file</figcaption>
           <p className="example-caption">Top: “Processing extremely important memes.”</p>
           <img
-            src="/media/mascot-mark.webp"
+            src={publicPath('/media/mascot-mark.webp')}
             width={640}
             height={640}
             alt="Computer mascot used in the center of the comic burst meme."
@@ -102,7 +103,7 @@ export function Community() {
           <p className="example-caption">Top: “Tiny computer.”</p>
           <img
             className="example-seal"
-            src="/media/logo-seal.webp"
+            src={publicPath('/media/logo-seal.webp')}
             width={768}
             height={768}
             alt="Circular Vitalik-Inspired World Computer badge used in the mascot badge meme."
