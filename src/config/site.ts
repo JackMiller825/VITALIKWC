@@ -142,7 +142,7 @@ export const site: SiteConfig = {
   swapUrl: null,
   explorerUrl: null,
   telegramUrl: 'https://t.me/vitalikwc',
-  xUrl: 'https://x.com/',
+  xUrl: 'https://x.com/vitalikwc_eth',
   chartUrl: null,
   siteUrl: "https://jackmiller825.github.io/VITALIKWC",
   analyticsEnabled: false,

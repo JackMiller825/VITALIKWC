@@ -34,7 +34,7 @@ npm run preview
 - The meme maker runs in the browser, from `meme.exe` on the desktop. Captions are not uploaded.
 - Tokenomics lists a total supply of 1,000,000,000, buy and sell tax of 0%, and states that LP tokens are burnt and contract ownership is renounced.
 - How to buy walks through MetaMask, ETH, and Uniswap, and states that taxes are zero.
-- Telegram is https://t.me/vitalikwc. X is https://x.com/.
+- Telegram is https://t.me/vitalikwc. X is https://x.com/vitalikwc_eth.
 - Analytics are off.
 
 ## Launch facts still required
@@ -49,7 +49,7 @@ Edit `src/config/site.ts` only when a value is real. Leave unknowns as `null`.
 | `contractConfirmed: true` | Owner confirmation. A valid-looking address is not enough. |
 | `swapUrl` | Official https swap destination. The buy button stays hidden until status, confirmation, address, and this URL are all set. |
 | `explorerUrl` | https page for the token. It is not guessed from the address. |
-| `telegramUrl`, `xUrl` | Community links. Set to https://t.me/vitalikwc and https://x.com/. |
+| `telegramUrl`, `xUrl` | Community links. Set to https://t.me/vitalikwc and https://x.com/vitalikwc_eth. |
 | `supply`, `buyTax`, `sellTax`, `vesting` | Token spec rows, each with evidence URL, label, and checked date. |
 | `allocations` | Only if every slice is real and the percentages total 100. Otherwise the page keeps the “published before launch” line. |
 | `liquidity` | Separate from ownership. A lock needs pool, locker, share covered, and unlock date. A burn needs scope and evidence. |
