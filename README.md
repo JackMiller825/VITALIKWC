@@ -32,7 +32,7 @@ npm run preview
 
 - The contract address is **Coming Soon**. Copy on the page copies that line until a confirmed address is set.
 - The meme maker runs in the browser, from `meme.exe` on the desktop. Captions are not uploaded.
-- Tokenomics states that LP tokens are burnt and contract ownership is renounced. Supply is not announced.
+- Tokenomics lists a total supply of 1,000,000,000, buy and sell tax of 0%, and states that LP tokens are burnt and contract ownership is renounced.
 - How to buy walks through MetaMask, ETH, and Uniswap, and states that taxes are zero.
 - Telegram is https://t.me/vitalikwc. X is https://x.com/.
 - Analytics are off.

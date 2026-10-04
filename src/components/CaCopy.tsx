@@ -27,15 +27,15 @@ export function CaCopy({ withPrefix = false }: CaCopyProps) {
         {presentation.kind === 'published' ? <code className="address">{value}</code> : <strong>{value}</strong>}
       </p>
       <button type="button" className="btn btn-small" onClick={() => void onCopy()}>
-        {copyState === 'copied' ? 'Copied' : 'Copy CA'}
+        Copy CA
       </button>
-      {copyState === 'idle' ? null : (
-        <p className="fine" role="status">
-          {copyState === 'copied'
-            ? 'Copied.'
-            : 'Could not copy automatically. Select the contract line and copy it manually.'}
-        </p>
-      )}
+      <p className="visually-hidden" role="status">
+        {copyState === 'copied'
+          ? 'Copied.'
+          : copyState === 'failed'
+            ? 'Could not copy automatically. Select the contract line and copy it manually.'
+            : ''}
+      </p>
     </div>
   )
 }

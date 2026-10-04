@@ -116,6 +116,17 @@ function unannounced<T>(): Evidence<T> {
   }
 }
 
+function stated(value: string): Evidence<string> {
+  return {
+    value,
+    status: 'documented',
+    evidenceUrl: null,
+    evidenceLabel: null,
+    checkedAt: null,
+    note: null,
+  }
+}
+
 export const site: SiteConfig = {
   name: 'Vitalik-Inspired World Computer',
   shortName: 'VITALIKWC',
@@ -151,9 +162,9 @@ export const site: SiteConfig = {
     checkedAt: null,
     note: 'Stated by this project. This is not an on-chain check until a contract address is published and reviewed.',
   },
-  supply: unannounced(),
-  buyTax: unannounced(),
-  sellTax: unannounced(),
+  supply: stated('1,000,000,000'),
+  buyTax: stated('0%'),
+  sellTax: stated('0%'),
   vesting: unannounced(),
   allocations: null,
   liquidity: {

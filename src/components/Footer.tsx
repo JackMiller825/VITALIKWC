@@ -1,27 +1,20 @@
 import { site } from '../config/site.ts'
 import { track } from '../lib/analytics.ts'
+import { publicPath } from '../lib/publicPath.ts'
 import { ExternalLink } from './ExternalLink.tsx'
-
-const links = [
-  { href: '#desktop', label: 'The Desktop' },
-  { href: '#token', label: 'Tokenomics' },
-  { href: '#buy', label: 'How to Buy' },
-  { href: '#community', label: 'Community' },
-]
 
 export function Footer() {
   return (
     <footer className="site-footer">
       <div className="wrap footer-bar">
-        <nav aria-label="Footer">
-          <ul className="footer-links">
-            {links.map((link) => (
-              <li key={link.href}>
-                <a href={link.href}>{link.label}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <a className="footer-logo" href="#top">
+          <img
+            src={publicPath('/media/logo-seal.webp')}
+            width={768}
+            height={768}
+            alt="Vitalik-Inspired World Computer"
+          />
+        </a>
         <div className="footer-social">
           <ExternalLink href={site.telegramUrl ?? ''} onClick={() => track('community_link_click')}>
             <TelegramIcon />
