@@ -29,23 +29,25 @@ export function Navigation() {
             />
             <span>VITALIKWC</span>
           </a>
-          {buy && site.swapUrl ? (
-            <a className="btn btn-primary" href={site.swapUrl} onClick={() => track('buy_link_click')}>
-              Buy $VITALIKWC
-            </a>
-          ) : (
-            <a className="btn btn-primary" href="#community">
-              Join the Community
-            </a>
-          )}
+          <div className="nav-actions">
+            <nav className="nav-links" aria-label="Page">
+              {links.map((link) => (
+                <a key={link.href} href={link.href}>
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+            {buy && site.swapUrl ? (
+              <a className="btn btn-primary" href={site.swapUrl} onClick={() => track('buy_link_click')}>
+                Buy $VITALIKWC
+              </a>
+            ) : (
+              <a className="btn btn-primary" href="#community">
+                Join the Community
+              </a>
+            )}
+          </div>
         </div>
-        <nav className="nav-links" aria-label="Page">
-          {links.map((link) => (
-            <a key={link.href} href={link.href}>
-              {link.label}
-            </a>
-          ))}
-        </nav>
       </div>
     </header>
   )
