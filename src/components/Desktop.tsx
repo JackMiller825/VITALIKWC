@@ -107,11 +107,6 @@ export function Desktop() {
         {app === 'token' ? (
           <div className="file-view">
             <TokenDetails />
-            <p>
-              <a href="#token" onClick={() => setApp(null)}>
-                Open Tokenomics
-              </a>
-            </p>
           </div>
         ) : null}
       </AppWindow>
