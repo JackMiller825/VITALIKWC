@@ -1,0 +1,13 @@
+{
+  "name": "Vitalik-Inspired World Computer",
+  "short_name": "VITALIKWC",
+  "description": "Independent Ethereum community memecoin.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFBEA",
+  "theme_color": "#21103E",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
