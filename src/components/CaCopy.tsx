@@ -27,7 +27,7 @@ export function CaCopy({ withPrefix = false }: CaCopyProps) {
         {presentation.kind === 'published' ? <code className="address">{value}</code> : <strong>{value}</strong>}
       </p>
       <button type="button" className="btn btn-small" onClick={() => void onCopy()}>
-        Copy CA
+        {copyState === 'copied' ? 'Copied' : 'Copy CA'}
       </button>
       <p className="visually-hidden" role="status">
         {copyState === 'copied'
