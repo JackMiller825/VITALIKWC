@@ -368,6 +368,33 @@ a:hover {
   gap: 0.7rem;
 }
 
+.ca-copy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.75rem;
+  margin-top: 0.95rem;
+}
+
+.ca-copy p {
+  margin: 0;
+}
+
+.ca-value {
+  font-weight: 700;
+  font-size: 1.08rem;
+}
+
+.ca-copy .address {
+  display: inline;
+  margin: 0;
+  padding: 0.15rem 0.4rem;
+}
+
+.spec .ca-copy {
+  margin-top: 0;
+}
+
 .affiliation {
   margin: 0.9rem 0 0;
   max-width: 46rem;
@@ -906,10 +933,47 @@ textarea {
   max-width: 68ch;
 }
 
+.footer-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem 1.4rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 0.55rem;
+  margin-left: auto;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--mint);
+  border-radius: 12px;
+  color: var(--mint);
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  background: var(--mint);
+  color: var(--ink);
+}
+
+.footer-social svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
 .site-footer {
   background: var(--ink);
   color: var(--cream);
-  padding: 2rem 0 2.2rem;
+  padding: 1.3rem 0;
 }
 
 .site-footer a {
@@ -936,7 +1000,7 @@ textarea {
   gap: 0.35rem 1rem;
   padding: 0;
   list-style: none;
-  margin: 0.8rem 0;
+  margin: 0;
 }
 
 .risk {

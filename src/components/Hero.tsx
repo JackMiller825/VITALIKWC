@@ -2,7 +2,7 @@ import { canOfferBuyLink, isHttpsUrl } from '../config/guards.ts'
 import { site } from '../config/site.ts'
 import { track } from '../lib/analytics.ts'
 import { publicPath } from '../lib/publicPath.ts'
-import { ContractStatus } from './ContractStatus.tsx'
+import { CaCopy } from './CaCopy.tsx'
 import { ExternalLink } from './ExternalLink.tsx'
 
 export function Hero() {
@@ -38,18 +38,12 @@ export function Hero() {
                 Join Telegram
               </ExternalLink>
             ) : (
-              <a className="btn" href="#story">
-                Explore the Story
+              <a className="btn" href="#desktop">
+                Explore the Desktop
               </a>
             )}
           </div>
-          <p className="text-link-row">
-            <ExternalLink href={site.sourceArticle.url} onClick={() => track('source_essay_click')}>
-              Read the original essay.
-            </ExternalLink>
-          </p>
-          <ContractStatus />
-          <p className="affiliation">{site.affiliation}</p>
+          <CaCopy withPrefix />
         </div>
         <div className="os-window hero-art">
           <div className="os-titlebar" aria-hidden="true">

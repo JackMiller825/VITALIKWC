@@ -105,30 +105,20 @@ export function Desktop() {
               </ExternalLink>
               <span className="mono-note"> · {site.sourceArticle.dateLabel}</span>
             </p>
-            <p>
-              <a
-                href="#story"
-                onClick={() => {
-                  setApp(null)
-                }}
-              >
-                Read the full story on this page
-              </a>
-            </p>
           </div>
         ) : null}
         {app === 'meme' ? (
           <div className="file-view">
-            <p>Same maker as the Meme Maker section. Nothing you type is uploaded.</p>
+            <p>Captions stay in this browser. Nothing you type is uploaded.</p>
             <MemeMaker immediate />
           </div>
         ) : null}
         {app === 'token' ? (
           <div className="file-view">
-            <TokenDetails mode="embedded" />
+            <TokenDetails />
             <p>
               <a href="#token" onClick={() => setApp(null)}>
-                Open the full token details
+                Open Tokenomics
               </a>
             </p>
           </div>

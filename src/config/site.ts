@@ -103,8 +103,6 @@ export interface SiteConfig {
     sourceUrl: string | null
   }
   assetManifest: DownloadAsset[]
-  affiliation: string
-  risk: string
 }
 
 function unannounced<T>(): Evidence<T> {
@@ -124,7 +122,7 @@ export const site: SiteConfig = {
   symbol: 'VITALIKWC',
   ticker: '$VITALIKWC',
   description:
-    'Meet $VITALIKWC, an independent Ethereum community memecoin. A tiny computer mascot, the world-computer story, and a meme maker. Not affiliated with Vitalik Buterin or the Ethereum Foundation.',
+    'Meet $VITALIKWC, an Ethereum community memecoin. A tiny computer mascot, a desktop, and a meme maker.',
   chainId: 1,
   chainName: 'Ethereum mainnet',
   launchStatus: 'prelaunch',
@@ -132,8 +130,8 @@ export const site: SiteConfig = {
   contractAddress: null,
   swapUrl: null,
   explorerUrl: null,
-  telegramUrl: null,
-  xUrl: null,
+  telegramUrl: 'https://t.me/vitalikwc',
+  xUrl: 'https://x.com/',
   chartUrl: null,
   siteUrl: "https://jackmiller825.github.io/VITALIKWC",
   analyticsEnabled: false,
@@ -220,7 +218,4 @@ export const site: SiteConfig = {
       sizeLabel: '2.1 MB PNG',
     },
   ],
-  affiliation:
-    'Independent community project. Not affiliated with or endorsed by Vitalik Buterin or the Ethereum Foundation.',
-  risk: 'VITALIKWC is a speculative community memecoin. Its value can fall to zero. Buying it does not confer ownership of Ethereum infrastructure or rights in Vitalik Buterin’s work.',
 }

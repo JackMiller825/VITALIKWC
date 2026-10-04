@@ -4,9 +4,8 @@ import { track } from '../lib/analytics.ts'
 import { publicPath } from '../lib/publicPath.ts'
 
 const links = [
-  { href: '#story', label: 'Story' },
   { href: '#desktop', label: 'The Desktop' },
-  { href: '#token', label: 'Token Details' },
+  { href: '#token', label: 'Tokenomics' },
   { href: '#buy', label: 'How to Buy' },
   { href: '#community', label: 'Community' },
 ]

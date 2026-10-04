@@ -1,8 +1,6 @@
 # Vitalik-Inspired World Computer
 
-Website for **$VITALIKWC**, an independent Ethereum community memecoin. The page is a small retro desktop: the story, a working meme maker, and a token file that stays blank until facts are actually known.
-
-Independent community project. Not affiliated with or endorsed by Vitalik Buterin or the Ethereum Foundation.
+Website for **$VITALIKWC**, an Ethereum community memecoin. The page is a small retro desktop: a meme maker, tokenomics, and how to buy.
 
 Public site: https://jackmiller825.github.io/VITALIKWC/
 
@@ -32,11 +30,11 @@ npm run preview
 
 ## What is already true
 
-- The token is **pre-launch**. There is no contract address and no buy link.
-- The network stated for the project is Ethereum mainnet (chain ID 1). That is a project statement, not an on-chain check.
-- The meme maker runs in the browser. Captions are not uploaded.
-- Supply, taxes, allocation, vesting, liquidity, and admin permissions are **not announced**. The page does not invent them.
-- Telegram, X, the explorer, the swap, and the chart are unset. Those actions stay non-links.
+- The contract address is **Coming Soon**. Copy on the page copies that line until a confirmed address is set.
+- The meme maker runs in the browser, from `meme.exe` on the desktop. Captions are not uploaded.
+- Tokenomics states that LP tokens are burnt and contract ownership is renounced. Supply is not announced.
+- How to buy walks through MetaMask, ETH, and Uniswap, and states that taxes are zero.
+- Telegram is https://t.me/vitalikwc. X is https://x.com/.
 - Analytics are off.
 
 ## Launch facts still required
@@ -51,7 +49,7 @@ Edit `src/config/site.ts` only when a value is real. Leave unknowns as `null`.
 | `contractConfirmed: true` | Owner confirmation. A valid-looking address is not enough. |
 | `swapUrl` | Official https swap destination. The buy button stays hidden until status, confirmation, address, and this URL are all set. |
 | `explorerUrl` | https page for the token. It is not guessed from the address. |
-| `telegramUrl`, `xUrl` | Community links. |
+| `telegramUrl`, `xUrl` | Community links. Set to https://t.me/vitalikwc and https://x.com/. |
 | `supply`, `buyTax`, `sellTax`, `vesting` | Token spec rows, each with evidence URL, label, and checked date. |
 | `allocations` | Only if every slice is real and the percentages total 100. Otherwise the page keeps the “published before launch” line. |
 | `liquidity` | Separate from ownership. A lock needs pool, locker, share covered, and unlock date. A burn needs scope and evidence. |

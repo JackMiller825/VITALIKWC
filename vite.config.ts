@@ -13,7 +13,7 @@ function readSiteUrl(): string | null {
 function siteFiles(): Plugin {
   const origin = readSiteUrl()?.replace(/\/$/, '') ?? ''
   const description =
-    'Meet $VITALIKWC, an independent Ethereum community memecoin. A tiny computer mascot, the world-computer story, and a meme maker. Not affiliated with Vitalik Buterin or the Ethereum Foundation.'
+    'Meet $VITALIKWC, an Ethereum community memecoin. A tiny computer mascot, a desktop, and a meme maker.'
   return {
     name: 'site-files',
     transformIndexHtml(html) {

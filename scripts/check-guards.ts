@@ -27,6 +27,10 @@ assert.equal(canOfferBuyLink(site), false)
 assert.equal(addressPresentation(site).kind, 'not_announced')
 assert.equal(marketDataEnabled(site), false)
 assert.equal(isHttpsUrl(site.sourceArticle.url), true)
+assert.equal(site.telegramUrl, 'https://t.me/vitalikwc')
+assert.equal(site.xUrl, 'https://x.com/')
+assert.equal(isHttpsUrl(site.telegramUrl), true)
+assert.equal(isHttpsUrl(site.xUrl), true)
 assert.equal(site.chainId, 1)
 
 for (const asset of site.assetManifest) {
