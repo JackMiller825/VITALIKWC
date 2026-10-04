@@ -8,7 +8,6 @@
   --mint-soft: #e7fff6;
   --cream: #fffbea;
   --paper: #fffdf4;
-  --header-offset: 8.5rem;
   --font-display: 'Fredoka', 'Trebuchet MS', sans-serif;
   --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
@@ -441,9 +440,13 @@ a:hover {
   padding: 0.95rem;
 }
 
+.hero-band,
+.section {
+  scroll-margin-top: 14rem;
+}
+
 .section {
   padding: 2.6rem 0;
-  scroll-margin-top: var(--header-offset);
 }
 
 .section-mint {
@@ -1032,6 +1035,11 @@ dialog.os-dialog::backdrop {
 }
 
 @media (min-width: 760px) {
+  .hero-band,
+  .section {
+    scroll-margin-top: 8rem;
+  }
+
   .downloads {
     grid-template-columns: 1fr 1fr;
   }
