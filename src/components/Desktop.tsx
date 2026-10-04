@@ -1,10 +1,7 @@
 import { useState } from 'react'
-import { site } from '../config/site.ts'
 import { mascotQuips, storyFileText } from '../content/story.ts'
-import { track } from '../lib/analytics.ts'
 import { publicPath } from '../lib/publicPath.ts'
 import { AppWindow } from './AppWindow.tsx'
-import { ExternalLink } from './ExternalLink.tsx'
 import { MemeMaker } from './MemeMaker.tsx'
 import { Section } from './Section.tsx'
 import { TokenDetails } from './TokenDetails.tsx'
@@ -58,7 +55,7 @@ export function Desktop() {
               <button type="button" className="desk-icon" onClick={() => setApp('story')}>
                 <IconFile />
                 <span>story.txt</span>
-                <small>Short story and source</small>
+                <small>Short story</small>
               </button>
               <button type="button" className="desk-icon" onClick={() => setApp('meme')}>
                 <IconApp />
@@ -99,12 +96,6 @@ export function Desktop() {
         {app === 'story' ? (
           <div className="file-view">
             <p>{storyFileText}</p>
-            <p>
-              <ExternalLink href={site.sourceArticle.url} onClick={() => track('source_essay_click')}>
-                {site.sourceArticle.title}
-              </ExternalLink>
-              <span className="mono-note"> · {site.sourceArticle.dateLabel}</span>
-            </p>
           </div>
         ) : null}
         {app === 'meme' ? (

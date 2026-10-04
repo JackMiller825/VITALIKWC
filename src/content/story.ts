@@ -20,7 +20,7 @@ export const concepts = [
 ]
 
 export const storyFileText =
-  'This file is the short version. Vitalik-Inspired World Computer is an independent community memecoin with a desktop mascot. Its mood comes from public research about a cryptographic world computer: verification, privacy, and connected computation. The token does not do those jobs.'
+  '🌍💻 $VITALIKWC is an Ethereum memecoin inspired by Vitalik’s world-computer vision with a planet-sized brain and absolutely no idea which tab is playing music.'
 
 export const mascotQuips = [
   'Processing extremely important memes.',
